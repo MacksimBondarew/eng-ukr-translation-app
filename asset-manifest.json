@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/eng-ukr-translation-app/static/css/main.fc8e87ca.css",
-    "main.js": "/eng-ukr-translation-app/static/js/main.1281b0b7.js",
+    "main.js": "/eng-ukr-translation-app/static/js/main.111f285f.js",
     "index.html": "/eng-ukr-translation-app/index.html",
     "main.fc8e87ca.css.map": "/eng-ukr-translation-app/static/css/main.fc8e87ca.css.map",
-    "main.1281b0b7.js.map": "/eng-ukr-translation-app/static/js/main.1281b0b7.js.map"
+    "main.111f285f.js.map": "/eng-ukr-translation-app/static/js/main.111f285f.js.map"
   },
   "entrypoints": [
     "static/css/main.fc8e87ca.css",
-    "static/js/main.1281b0b7.js"
+    "static/js/main.111f285f.js"
   ]
 }
