@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import shuffle from 'lodash.shuffle';
 import { useSelector } from 'react-redux';
-import { selectWords } from 'redux/selectors';
+import { selectCheckedsWords, selectWords } from 'redux/selectors';
 
-const getRandomIntegetFromInterval = (min, max) => {
+export const getRandomIntegetFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 export const QuizComponent = ({attemptsQuantity}) => {
     const words = useSelector(selectWords);
-    const [checkedWords, setCheckedWords] = useState(filteredWords(words));
+    const [checkedWords, setCheckedWords] = useState(selectCheckedsWords(words));
     const [randomWord, setRandomWord] = useState(
         checkedWords[getRandomIntegetFromInterval(0, checkedWords.length - 1)]
     );
@@ -38,9 +38,6 @@ export const QuizComponent = ({attemptsQuantity}) => {
     // };
     // console.log(notUsibleNowButSetWarning);
 
-    function filteredWords(words) {
-        return words.filter(word => word.checked);
-    }
 
     function getVariants() {
         const variants = new Array(4).fill(null).reduce((acc, _, index) => {
